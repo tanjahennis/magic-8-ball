@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var randomBallNumber : Int = 0
+    var randomBallNumber = 0
     
     let ballArray = ["ball1", "ball2", "ball3", "ball4", "ball5"]
 
@@ -33,10 +33,8 @@ class ViewController: UIViewController {
     }
 
     func newBallImage() {
-        
-        randomBallNumber = Int(arc4random_uniform(4))
+        randomBallNumber = Int(arc4random_uniform(5))
         imageView.image = UIImage(named: ballArray[randomBallNumber])
-        
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
